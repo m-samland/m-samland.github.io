@@ -1724,7 +1724,7 @@
 	}
 
 		h2.alt {
-			color: rgba(255, 255, 255, 0.85);
+			color: #ffffff;
 		}
 
 			h2.alt strong {
@@ -2346,7 +2346,7 @@
 				background: linear-gradient(
 					180deg,
 					rgba(15, 18, 24, 0.65) 0%,
-					rgba(15, 18, 24, 0.48) 50%,
+					rgba(15, 18, 24, 0.60) 50%,
 					rgba(15, 18, 24, 0.75) 100%
 				);
 				z-index: 1;
@@ -2403,7 +2403,7 @@
 	}
 
 	.hero-text p {
-		color: rgba(255, 255, 255, 0.7);
+		color: rgba(255, 255, 255, 0.92);
 		margin-bottom: 0.3em;
 	}
 
@@ -2559,7 +2559,7 @@
 
 	.pub-metrics {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(4, 1fr);
 		gap: 1.5em;
 		margin-bottom: 2.5em;
 	}
@@ -2593,6 +2593,15 @@
 		margin-top: 0.3em;
 		text-transform: uppercase;
 		letter-spacing: 0.05em;
+	}
+
+	.pub-metric-sub {
+		display: block;
+		color: #6b7280;
+		font-size: 0.75em;
+		margin-top: 0.25em;
+		text-transform: none;
+		letter-spacing: 0;
 	}
 
 	.pub-section-heading {
@@ -3326,7 +3335,7 @@
 
 		/* Publication metrics responsive */
 			.pub-metrics {
-				grid-template-columns: repeat(3, 1fr);
+				grid-template-columns: repeat(2, 1fr);
 				gap: 0.75em;
 			}
 
