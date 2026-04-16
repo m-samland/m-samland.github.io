@@ -2559,9 +2559,16 @@
 
 	.pub-metrics {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		gap: 1.5em;
 		margin-bottom: 2.5em;
+	}
+
+	.obs-metrics {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1.5em;
+		margin-bottom: 2em;
 	}
 
 	.pub-metric {
@@ -3337,6 +3344,23 @@
 			.pub-metrics {
 				grid-template-columns: repeat(2, 1fr);
 				gap: 0.75em;
+			}
+
+			.pub-metrics .pub-metric:last-child:nth-child(odd) {
+				grid-column: 1 / -1;
+				max-width: calc(50% - 0.375em);
+				margin-inline: auto;
+			}
+
+			.obs-metrics {
+				grid-template-columns: repeat(2, 1fr);
+				gap: 0.75em;
+			}
+
+			.obs-metrics .pub-metric:last-child:nth-child(odd) {
+				grid-column: 1 / -1;
+				max-width: calc(50% - 0.375em);
+				margin-inline: auto;
 			}
 
 			.pub-metric {
