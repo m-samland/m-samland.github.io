@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Vim
+*.swp
+*.swo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Planning docs (not part of the published site)
+docs/
+
+# Empty asset directory
+assets/css/images/

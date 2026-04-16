@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="en">
+	<head>
+		<title>Matthias Samland's Research</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Personal website of Matthias Samland, astronomer and astrophysicist researching exoplanet detection and characterization via high-contrast imaging." />
+		<meta name="author" content="Matthias Samland" />
+		<link rel="canonical" href="https://m-samland.github.io/" />
+	<link rel="preload" as="image" href="images/starrysky_hexagon_web.webp" type="image/webp" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+		<a href="#main" class="skip-link">Skip to content</a>
+		<!-- Header -->
+			<header id="header">
+				<div class="top">
+					<!-- Logo -->
+						<div id="logo">
+							<h1 id="title">Matthias Samland</h1>
+							<p>Astrophysicist, PhD</p>
+							<ul class="profile-links">
+								<li><a href="https://github.com/m-samland" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a></li>
+								<li><a href="https://orcid.org/0000-0001-9992-4067" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i> ORCID</a></li>
+								<li><a href="https://ui.adsabs.harvard.edu/public-libraries/DhKHtAPgSyavBfU02tg2pw" target="_blank" rel="noopener"><i class="fa-solid fa-book-open"></i> ADS</a></li>
+							</ul>
+						</div>
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="#top" id="top-link"><span class="icon fa-house">Intro</span></a></li>
+								<li><a href="#research" id="research-link"><span class="icon fa-graduation-cap">Research Interest</span></a></li>
+								<li><a href="#publications" id="publications-link"><span class="icon fa-book">Publications</span></a></li>
+								<li><a href="#codes" id="codes-link"><span class="icon fa-code">Codes</span></a></li>
+								<li><a href="#cvabout" id="cvabout-link"><span class="icon fa-user">CV / About me</span></a></li>
+								<li><a href="#contact" id="contact-link"><span class="icon fa-envelope">Contact</span></a></li>
+								<li><a href="#japanese" id="japanese-link"><span class="icon fa-comment">Learning Japanese</span></a></li>
+							</ul>
+						</nav>
+				</div>
+				<div class="bottom">
+				</div>
+
+			</header>
+
+		<!-- Main -->
+			<main id="main">
+				<!-- Intro -->
+					<section id="top" class="one dark cover">
+						<div class="container">
+
+							<div class="hero-content">
+								<img src="images/avatar.webp" alt="Photo of Matthias Samland" class="hero-photo" />
+								<div class="hero-text">
+									<h2 class="alt">Matthias Samland</h2>
+									<h3 class="alt">Post-doctoral Researcher</h3>
+									<p>@Max Planck Institute for Astronomy (Germany)</p>
+									<p>This website features an overview of my <a href="#research">research</a>,
+										 <a href="#publications">publications</a> and <a href="#codes">codes</a>.</p>
+								</div>
+							</div>
+							<footer>
+								<a href="#research" class="button scrolly hero-cta">Jump to research</a>
+							</footer>
+
+						</div>
+					</section>
+
+				<!-- Research -->
+					<section id="research" class="two">
+						<div class="container">
+
+							<header>
+								<h2>Research Interest</h2>
+								<p>Post-doctoral researcher in the <a href="https://www.mpia.de/en/psf" target="_blank" rel="noopener">Planet Formation and Exoplanets (PFE)</a> department at the <a href="https://www.mpia.de" target="_blank" rel="noopener">Max Planck Institute for Astronomy</a>. My work spans developing new detection algorithms, building open-source data pipelines, characterizing exoplanet atmospheres, and probing debris disk composition with JWST.</p>
+							</header>
+
+							<div class="research-grid">
+								<div class="research-card">
+									<div class="card-image">
+										<img src="images/research/trap.webp" alt="Illustration: a faint planet signal emerging from stellar noise" loading="lazy" />
+										<i class="fa-solid fa-satellite card-icon-badge"></i>
+									</div>
+									<div class="card-body">
+										<h3>A New Algorithm to Find Planets</h3>
+										<p>Classical imaging methods fail where planets are hardest to find: close to the star. I invented <a href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..24S/abstract" target="_blank" rel="noopener">TRAP</a>, which borrows ideas from transit spectroscopy to model each pixel's time-series instead of subtracting images&mdash;achieving up to 6&times; better contrast at small separations.</p>
+										<a href="Exo3Conference_poster.html" class="card-link" aria-label="Details about the TRAP algorithm (conference poster)">Details</a>
+										<a href="https://github.com/m-samland/trap" target="_blank" rel="noopener" class="card-link"><i class="fa-brands fa-github"></i> Code</a>
+									</div>
+								</div>
+								<div class="research-card">
+									<div class="card-image">
+										<img src="images/research/pipeline.webp" alt="Illustration: raw data transforming into a clean spectrum" loading="lazy" />
+										<i class="fa-solid fa-code-branch card-icon-badge"></i>
+									</div>
+									<div class="card-body">
+										<h3>Data Processing Pipelines</h3>
+										<p>I build open-source pipelines that turn raw detector counts into science-ready data across ground and space telescopes: <a href="https://github.com/m-samland/spherical" target="_blank" rel="noopener">spherical</a> (VLT/SPHERE), <a href="https://github.com/PrincetonUniversity/charis-dep/tree/main" target="_blank" rel="noopener">CHARIS-DEP</a> (Subaru/SCExAO), and contributions to <a href="https://github.com/spacetelescope/jwst" target="_blank" rel="noopener">JWST</a> and <a href="https://github.com/roman-corgi/corgidrp" target="_blank" rel="noopener">Roman CGI</a>.</p>
+										<a href="#codes" class="card-link"><i class="fa-brands fa-github"></i> Codes</a>
+									</div>
+								</div>
+								<div class="research-card">
+									<div class="card-image">
+										<img src="images/research/characterization.webp" alt="Illustration: a giant planet with spectral light fanning from its atmosphere" loading="lazy" />
+										<i class="fa-solid fa-globe card-icon-badge"></i>
+									</div>
+									<div class="card-body">
+										<h3>Discovery &amp; Characterization</h3>
+										<p>I led the <a href="https://ui.adsabs.harvard.edu/#abs/2017A&A...603A..57S/abstract" target="_blank" rel="noopener">spectral characterization of 51&nbsp;Eridani&nbsp;b</a>, one of the coldest directly imaged young Jupiters, and co-discovered <a href="https://ui.adsabs.harvard.edu/abs/2025A%26A...700A..21S/abstract" target="_blank" rel="noopener">HD&nbsp;135344&nbsp;Ab</a>&mdash;a ~10&nbsp;M<sub>J</sub> giant planet at Solar-System scales and one of the youngest in a fully formed state.</p>
+									</div>
+								</div>
+								<div class="research-card">
+									<div class="card-image">
+										<img src="images/research/debrisdisk.webp" alt="Illustration: rocky fragments sublimating near a star, releasing glowing elemental signatures" loading="lazy" />
+										<i class="fa-solid fa-meteor card-icon-badge"></i>
+									</div>
+									<div class="card-body">
+										<h3>Debris Disks &amp; Evaporating Exocomets</h3>
+										<p>With JWST/MIRI we made the <a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...989..132S/abstract" target="_blank" rel="noopener">first detection of chlorine, sulfur, and nickel gas in a debris disk</a>&mdash;released by rocky bodies evaporating near HD&nbsp;172555. This turns the system into a geochemical laboratory for extrasolar asteroids and comets.</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+				<!-- Publications -->
+					<section id="publications" class="three">
+						<div class="container">
+							<header>
+								<h2>Publications</h2>
+							</header>
+
+							<div class="pub-metrics">
+								<div class="pub-metric">
+									<span class="pub-metric-number">90+</span>
+									<span class="pub-metric-label">Refereed Papers</span>
+								</div>
+								<div class="pub-metric">
+									<span class="pub-metric-number">5</span>
+									<span class="pub-metric-label">First Author</span>
+								</div>
+								<div class="pub-metric">
+									<span class="pub-metric-number">2500+</span>
+									<span class="pub-metric-label">Citations</span>
+								</div>
+							</div>
+
+							<h3 class="pub-section-heading">Selected First-Author Papers</h3>
+							<ul class="pub-highlights">
+								<li>
+									<span class="pub-year">2025</span>
+									<a href="https://ui.adsabs.harvard.edu/abs/2025ApJ...989..132S/abstract" target="_blank">First detection of Cl, S, and Ni gas in a debris disk (HD 172555)</a>
+									<span class="pub-venue">ApJ</span>
+								</li>
+								<li>
+									<span class="pub-year">2022</span>
+									<a href="https://ui.adsabs.harvard.edu/abs/2022arXiv221006390S/abstract" target="_blank">Open-source SPHERE-IFS pipeline with full forward modeling</a>
+									<span class="pub-venue">A&amp;A</span>
+								</li>
+								<li>
+									<span class="pub-year">2021</span>
+									<a href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..24S/abstract" target="_blank">TRAP: temporal systematics model for exoplanet detection</a>
+									<span class="pub-venue">A&amp;A</span>
+								</li>
+								<li>
+									<span class="pub-year">2017</span>
+									<a href="https://ui.adsabs.harvard.edu/#abs/2017A&A...603A..57S/abstract" target="_blank">Spectral and atmospheric characterization of 51 Eridani b</a>
+									<span class="pub-venue">A&amp;A</span>
+								</li>
+							</ul>
+
+							<div class="pub-portals">
+								<a href="https://ui.adsabs.harvard.edu/public-libraries/DhKHtAPgSyavBfU02tg2pw" target="_blank" rel="noopener" class="pub-portal"><i class="fa-solid fa-book-open"></i> ADS Portfolio</a>
+								<a href="https://orcid.org/0000-0001-9992-4067" target="_blank" rel="noopener" class="pub-portal"><i class="fa-brands fa-orcid"></i> ORCID</a>
+							</div>
+						</div>
+					</section>
+
+					<!-- Codes -->
+					<section id="codes" class="two">
+						<div class="container">
+							<header>
+								<h2>Codes</h2>
+							</header>
+
+							<div class="code-list">
+
+								<!-- spherical -->
+								<div class="code-row">
+									<div class="code-logo">
+										<img src="images/codes/spherical_banner.webp" alt="spherical logo" loading="lazy" />
+									</div>
+									<div class="code-body">
+										<div class="code-header-row">
+											<h3 class="code-name">spherical</h3>
+											<div class="code-badges">
+												<span class="code-badge code-badge-instrument">VLT/SPHERE</span>
+												<span class="code-badge code-badge-review">Under review at JOSS</span>
+											</div>
+										</div>
+										<p class="code-desc">VLT/SPHERE observation database &amp; IFS data analysis pipeline. Reduces raw detector data to calibrated spectral cubes using forward modeling, with built-in TRAP integration for planet detection.</p>
+										<div class="code-actions">
+											<a href="https://github.com/m-samland/spherical" target="_blank" rel="noopener" class="code-link"><i class="fa-brands fa-github"></i> GitHub</a>
+											<a href="https://arxiv.org/abs/2210.06390" target="_blank" rel="noopener" class="code-link"><i class="fa-solid fa-file-lines"></i> arXiv</a>
+											<code class="code-install">pip install "spherical[pipeline] @ git+https://github.com/m-samland/spherical.git"</code>
+										</div>
+									</div>
+								</div>
+
+								<!-- TRAP -->
+								<div class="code-row">
+									<div class="code-logo code-logo-text-only">
+										<span class="code-wordmark">TRAP</span>
+									</div>
+									<div class="code-body">
+										<div class="code-header-row">
+											<h3 class="code-name">TRAP</h3>
+											<div class="code-badges">
+												<span class="code-badge code-badge-instrument">VLT/SPHERE</span>
+												<span class="code-badge code-badge-reviewed">Peer-reviewed</span>
+											</div>
+										</div>
+										<p class="code-desc">Temporal Reference Analysis of Planets. Models and removes stellar contamination via causal temporal regression rather than image subtraction &mdash; achieving up to 6&times; better contrast at small separations.</p>
+										<div class="code-actions">
+											<a href="https://github.com/m-samland/trap" target="_blank" rel="noopener" class="code-link"><i class="fa-brands fa-github"></i> GitHub</a>
+											<a href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..24S/abstract" target="_blank" rel="noopener" class="code-link"><i class="fa-solid fa-file-lines"></i> Paper</a>
+											<code class="code-install">pip install git+https://github.com/m-samland/trap</code>
+										</div>
+									</div>
+								</div>
+
+								<!-- CHARIS-DEP -->
+								<div class="code-row">
+									<div class="code-logo code-logo-text-only">
+										<span class="code-wordmark">CHARIS</span>
+									</div>
+									<div class="code-body">
+										<div class="code-header-row">
+											<h3 class="code-name">CHARIS-DEP / SPHERE-IFS</h3>
+											<div class="code-badges">
+												<span class="code-badge code-badge-instrument">Subaru/CHARIS</span>
+												<span class="code-badge code-badge-instrument">VLT/SPHERE</span>
+												<span class="code-badge code-badge-reviewed">Peer-reviewed</span>
+											</div>
+										</div>
+										<p class="code-desc">Open-source, parallel, peer-reviewed cube extraction pipeline for high-contrast integral-field spectrographs. Processes Subaru/CHARIS and VLT/SPHERE-IFS data in under 3 minutes per cube using Cython and OpenMP.</p>
+										<div class="code-actions">
+											<a href="https://github.com/PrincetonUniversity/charis-dep" target="_blank" rel="noopener" class="code-link"><i class="fa-brands fa-github"></i> GitHub</a>
+											<a href="https://ui.adsabs.harvard.edu/abs/2022A%26A...668A..84S/abstract" target="_blank" rel="noopener" class="code-link"><i class="fa-solid fa-file-lines"></i> SPHERE-IFS Paper</a>
+											<a href="https://ui.adsabs.harvard.edu/abs/2017JATIS...3d8002B/abstract" target="_blank" rel="noopener" class="code-link"><i class="fa-solid fa-file-lines"></i> CHARIS Paper</a>
+										</div>
+									</div>
+								</div>
+
+								<!-- COMPASS -->
+								<div class="code-row">
+									<div class="code-logo code-logo-text-only">
+										<span class="code-wordmark" style="font-size:1.0em;">COMPASS</span>
+									</div>
+									<div class="code-body">
+										<div class="code-header-row">
+											<h3 class="code-name">COMPASS</h3>
+											<div class="code-badges">
+												<span class="code-badge code-badge-instrument">Gaia</span>
+												<span class="code-badge code-badge-reviewed">Peer-reviewed</span>
+											</div>
+										</div>
+										<p class="code-desc">Companion Proper Motion Analysis Software System. Evaluates exoplanet candidates by comparing multi-epoch astrometry against Gaia-based field star models, computing Bayesian odds ratios to distinguish true companions from background stars. Written by Philipp Herz (master&rsquo;s student, supervised by M. Samland).</p>
+										<div class="code-actions">
+											<a href="https://github.com/herzphi/compass" target="_blank" rel="noopener" class="code-link"><i class="fa-brands fa-github"></i> GitHub</a>
+											<a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...682A..92H/abstract" target="_blank" rel="noopener" class="code-link"><i class="fa-solid fa-file-lines"></i> Paper</a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</section>
+
+				<!-- CV -->
+					<section id="cvabout" class="three">
+						<div class="container">
+							<header>
+								<h2>CV / About me</h2>
+							</header>
+							<div class="cv-links">
+								<a href="cv.html" class="button">View CV</a>
+								<a href="Curriculum_Vitae.pdf" target="_blank" class="button cv-pdf-btn"><i class="fa-solid fa-download"></i> PDF</a>
+							</div>
+						</div>
+					</section>
+
+				<!-- Contact -->
+					<section id="contact" class="two">
+						<div class="container">
+							<header>
+								<h2>Contact</h2>
+							</header>
+							<dl>
+								<dt><i class="fa-solid fa-house"></i> Address</dt>
+								<dd>Max Planck Institute for Astronomy &bull; Königstuhl 17 &bull; 69117 Heidelberg &bull; Germany</dd>
+							</dl>
+							<dl>
+								<dt><i class="fa-solid fa-paper-plane"></i> Email</dt>
+								<dd><a href="mailto:samland@mpia.de">samland@mpia.de</a></dd>
+							</dl>
+							<dl>
+								<dt><i class="fa-solid fa-link"></i> Profiles</dt>
+								<dd class="contact-profiles">
+									<a href="https://github.com/m-samland" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> GitHub</a>
+									<a href="https://orcid.org/0000-0001-9992-4067" target="_blank" rel="noopener"><i class="fa-brands fa-orcid"></i> ORCID</a>
+									<a href="https://ui.adsabs.harvard.edu/public-libraries/DhKHtAPgSyavBfU02tg2pw" target="_blank" rel="noopener"><i class="fa-solid fa-book-open"></i> ADS</a>
+								</dd>
+							</dl>
+						</div>
+					</section>
+
+				<!-- Japanese -->
+				<section id="japanese" class="three">
+					<div class="container">
+						<header>
+							<h2>Learning Japanese</h2>
+						</header>
+						<p>I am often asked how I learned to read and speak Japanese fluently on my own. I wrote a guide quite some time ago to explain the methodology I followed. I am a big fan of self-study for language learning, as you can go at your own pace and do not rely on your teacher correctly balancing the progression speed of classes based on an average of the participants (who may not all share your passion and interest). If you are interested in learning the language give it shot! Remember that learning a language is not a sprint, but a marathon and therefore having fun rather than "discipline" is the way to go. Five new words a day will sum up to almost 2,000 words a year. Don't be discouraged when you're not fluent after a couple of months, but if you keep at it, you should be fluent after a couple of year (if not, you're probably doing it wrong). Also, everyone who claims that you can learn Japanese in 2 weeks is trying to sell you something. :p <br>
+						The resources I used are freely available online and are linked in the guide. Good luck and have fun!</p>
+						<a href="LearningJapanese.pdf" target="_blank" aria-label="Download the Learning Japanese guide (PDF)">Download</a>
+					</div>
+				</section>
+
+			</main>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="copyright">
+					<li>&copy; Matthias Samland. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
+
+		<!-- Back to top -->
+			<button class="back-to-top" aria-label="Back to top">
+				<i class="fa-solid fa-chevron-up"></i>
+			</button>
+
+		<!-- Scripts -->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

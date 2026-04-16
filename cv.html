@@ -1,0 +1,711 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>CV — Matthias Samland</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="description" content="Curriculum vitae of Matthias Samland, astronomer and astrophysicist at the Max Planck Institute for Astronomy." />
+		<link rel="canonical" href="https://m-samland.github.io/cv.html" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* ── CV page layout ───────────────────────────────────────── */
+
+			* { box-sizing: border-box; }
+
+			body {
+				background: #0f1218;
+				color: #e8e6e3;
+				margin: 0;
+				padding: 0;
+			}
+
+			/* Top navigation bar */
+			.cv-topbar {
+				position: sticky;
+				top: 0;
+				z-index: 100;
+				background: #1a1d23;
+				border-bottom: 1px solid #2a2f3a;
+				padding: 0.75em 2em;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 1em;
+			}
+
+			.cv-topbar-back {
+				color: #9ca3af;
+				font-size: 0.9em;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				gap: 0.5em;
+				transition: color 0.2s ease;
+				border-bottom: none !important;
+			}
+
+			.cv-topbar-back:hover {
+				color: #e8e6e3;
+			}
+
+			.cv-topbar-actions {
+				display: flex;
+				align-items: center;
+				gap: 0.75em;
+			}
+
+			.cv-download-btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.45em;
+				padding: 0.45em 1.1em;
+				background: #e8a838;
+				color: #0f1218 !important;
+				border-radius: 6px;
+				font-size: 0.875em;
+				font-weight: 600;
+				text-decoration: none;
+				border-bottom: none !important;
+				transition: background-color 0.2s ease;
+			}
+
+			.cv-download-btn:hover {
+				background: #f0be5a;
+			}
+
+			/* Content wrapper */
+			.cv-page {
+				max-width: 860px;
+				margin: 0 auto;
+				padding: 3em 2em 5em;
+			}
+
+			/* Header / name block */
+			.cv-header {
+				border-bottom: 2px solid #2a2f3a;
+				padding-bottom: 1.75em;
+				margin-bottom: 2.5em;
+			}
+
+			.cv-header h1 {
+				font-family: 'Lora', serif;
+				font-size: 2.2em;
+				font-weight: 400;
+				color: #e8e6e3;
+				margin: 0 0 0.2em;
+			}
+
+			.cv-header .cv-subtitle {
+				color: #9ca3af;
+				font-size: 1em;
+				margin: 0 0 1em;
+			}
+
+			.cv-header .cv-contacts {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5em 1.5em;
+				font-size: 0.875em;
+				color: #9ca3af;
+			}
+
+			.cv-header .cv-contacts a {
+				color: #9ca3af;
+				border-bottom: none !important;
+				transition: color 0.2s ease;
+			}
+
+			.cv-header .cv-contacts a:hover {
+				color: #e8a838;
+			}
+
+			.cv-header .cv-contacts i {
+				color: #e8a838;
+				margin-right: 0.3em;
+			}
+
+			/* Sections */
+			.cv-section {
+				margin-bottom: 2.5em;
+			}
+
+			.cv-section-title {
+				font-family: 'Lora', serif;
+				font-size: 0.75em;
+				font-weight: 600;
+				text-transform: uppercase;
+				letter-spacing: 0.12em;
+				color: #e8a838;
+				margin: 0 0 1em;
+				padding-bottom: 0.5em;
+				border-bottom: 1px solid #2a2f3a;
+			}
+
+			/* Generic entry: date left, content right */
+			.cv-entry {
+				display: grid;
+				grid-template-columns: 10em 1fr;
+				gap: 0 1.5em;
+				padding: 0.6em 0;
+				border-bottom: 1px solid rgba(42, 47, 58, 0.5);
+			}
+
+			.cv-entry:last-child {
+				border-bottom: none;
+			}
+
+			.cv-date {
+				color: #9ca3af;
+				font-size: 0.85em;
+				padding-top: 0.15em;
+				text-align: right;
+				flex-shrink: 0;
+			}
+
+			.cv-details {
+				font-size: 0.9em;
+				line-height: 1.6;
+			}
+
+			.cv-details strong {
+				color: #e8e6e3;
+				font-weight: 600;
+			}
+
+			.cv-details .cv-institution {
+				color: #9ca3af;
+				font-size: 0.9em;
+				margin-top: 0.1em;
+			}
+
+			.cv-details .cv-note {
+				color: #9ca3af;
+				font-size: 0.85em;
+				font-style: italic;
+				margin-top: 0.2em;
+			}
+
+			.cv-details .cv-thesis {
+				color: #9ca3af;
+				font-size: 0.85em;
+				margin-top: 0.2em;
+			}
+
+			.cv-details .cv-distinction {
+				display: inline-block;
+				margin-top: 0.3em;
+				font-size: 0.8em;
+				color: #e8a838;
+				background: rgba(232, 168, 56, 0.1);
+				border: 1px solid rgba(232, 168, 56, 0.25);
+				border-radius: 4px;
+				padding: 0.15em 0.6em;
+			}
+
+			/* Simple key-value items (cvitem style) */
+			.cv-item {
+				display: grid;
+				grid-template-columns: 10em 1fr;
+				gap: 0 1.5em;
+				padding: 0.45em 0;
+				font-size: 0.9em;
+				border-bottom: 1px solid rgba(42, 47, 58, 0.5);
+			}
+
+			.cv-item:last-child {
+				border-bottom: none;
+			}
+
+			.cv-item-label {
+				color: #9ca3af;
+				font-size: 0.85em;
+				text-align: right;
+				padding-top: 0.1em;
+			}
+
+			.cv-item-value {
+				color: #e8e6e3;
+				line-height: 1.6;
+			}
+
+			.cv-item-value a,
+			.cv-details a {
+				color: #e8a838;
+				border-bottom: none !important;
+				transition: color 0.2s ease;
+			}
+
+			.cv-item-value a:hover,
+			.cv-details a:hover {
+				color: #f0be5a;
+			}
+
+			/* Invited tag */
+			.tag-invited {
+				display: inline-block;
+				font-size: 0.75em;
+				color: #e8a838;
+				border: 1px solid rgba(232, 168, 56, 0.4);
+				border-radius: 4px;
+				padding: 0.05em 0.5em;
+				margin-left: 0.4em;
+				vertical-align: middle;
+				font-style: normal;
+				font-weight: 600;
+			}
+
+			/* Code badges */
+			.cv-code-badges {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.4em;
+				margin-top: 0.3em;
+			}
+
+			.cv-badge {
+				display: inline-block;
+				font-size: 0.8em;
+				background: #1e222a;
+				border: 1px solid #2a2f3a;
+				border-radius: 4px;
+				padding: 0.2em 0.6em;
+				color: #9ca3af;
+			}
+
+			/* ── Print styles ─────────────────────────────────────────── */
+			@media print {
+				body {
+					background: #fff !important;
+					color: #111 !important;
+					font-size: 10pt;
+				}
+
+				.cv-topbar { display: none; }
+
+				.cv-page {
+					max-width: none;
+					padding: 0;
+					margin: 0;
+				}
+
+				.cv-header {
+					border-bottom-color: #ccc;
+					margin-bottom: 1.5em;
+					padding-bottom: 1em;
+				}
+
+				.cv-header h1 { color: #111 !important; font-size: 1.8em; }
+				.cv-header .cv-subtitle { color: #555 !important; }
+				.cv-header .cv-contacts { color: #555 !important; }
+				.cv-header .cv-contacts a { color: #555 !important; }
+				.cv-header .cv-contacts i { color: #555 !important; }
+
+				.cv-section { margin-bottom: 1.5em; page-break-inside: avoid; }
+
+				.cv-section-title {
+					color: #111 !important;
+					border-bottom-color: #ccc;
+					font-size: 0.7em;
+				}
+
+				.cv-entry, .cv-item {
+					border-bottom-color: #ddd;
+					padding: 0.35em 0;
+				}
+
+				.cv-date, .cv-item-label { color: #555 !important; }
+				.cv-details, .cv-item-value { color: #111 !important; }
+				.cv-details strong { color: #111 !important; }
+				.cv-details .cv-institution,
+				.cv-details .cv-note,
+				.cv-details .cv-thesis { color: #555 !important; }
+				.cv-details .cv-distinction {
+					color: #333 !important;
+					background: none !important;
+					border-color: #ccc !important;
+				}
+
+				.tag-invited {
+					color: #333 !important;
+					border-color: #ccc !important;
+				}
+
+				.cv-badge {
+					background: none !important;
+					border-color: #ccc !important;
+					color: #555 !important;
+				}
+
+				a { color: #111 !important; }
+			}
+
+			/* ── Responsive ───────────────────────────────────────────── */
+			@media screen and (max-width: 640px) {
+				.cv-topbar { padding: 0.6em 1em; }
+				.cv-page { padding: 2em 1em 4em; }
+
+				.cv-entry,
+				.cv-item {
+					grid-template-columns: 1fr;
+					gap: 0.1em;
+				}
+
+				.cv-date,
+				.cv-item-label {
+					text-align: left;
+					font-size: 0.78em;
+				}
+
+				.cv-header .cv-contacts { gap: 0.4em 1em; }
+			}
+		</style>
+	</head>
+	<body>
+		<a href="#cv-main" class="skip-link">Skip to content</a>
+
+		<!-- Top navigation bar -->
+		<nav class="cv-topbar" aria-label="Site navigation">
+			<a href="index.html" class="cv-topbar-back">
+				<i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Matthias Samland
+			</a>
+			<div class="cv-topbar-actions">
+				<a href="Curriculum_Vitae.pdf" target="_blank" class="cv-download-btn" aria-label="Download CV as PDF">
+					<i class="fa-solid fa-download" aria-hidden="true"></i> PDF
+				</a>
+			</div>
+		</nav>
+
+		<!-- CV content -->
+		<main class="cv-page" id="cv-main">
+
+			<!-- Header -->
+			<header class="cv-header">
+				<h1>Matthias Samland</h1>
+				<p class="cv-subtitle">Independent Post-doctoral Researcher &mdash; Max Planck Institute for Astronomy</p>
+				<div class="cv-contacts">
+					<span><i class="fa-solid fa-envelope" aria-hidden="true"></i><a href="mailto:samland@mpia.de">samland@mpia.de</a></span>
+					<span><i class="fa-brands fa-orcid" aria-hidden="true"></i><a href="https://orcid.org/0000-0001-9992-4067" target="_blank" rel="noopener">ORCID 0000-0001-9992-4067</a></span>
+					<span><i class="fa-brands fa-github" aria-hidden="true"></i><a href="https://github.com/m-samland" target="_blank" rel="noopener">m-samland</a></span>
+					<span><i class="fa-solid fa-book-open" aria-hidden="true"></i><a href="https://ui.adsabs.harvard.edu/public-libraries/DhKHtAPgSyavBfU02tg2pw" target="_blank" rel="noopener">ADS Portfolio</a></span>
+					<span><i class="fa-solid fa-location-dot" aria-hidden="true"></i>K&ouml;nigstuhl 17, 69117 Heidelberg, Germany</span>
+				</div>
+			</header>
+
+			<!-- Personal Information -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Personal Information</h2>
+				<div class="cv-item">
+					<span class="cv-item-label">Languages</span>
+					<span class="cv-item-value">Native German &bull; Native-level English &bull; Fluent Japanese (<a href="http://jlpt.jp/e/about/levelsummary.html" target="_blank" rel="noopener">JLPT N1</a>)</span>
+				</div>
+			</section>
+
+			<!-- Education -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Education &mdash; leading expertise in high-contrast imaging</h2>
+
+				<div class="cv-entry">
+					<span class="cv-date">Nov 2015 &ndash; Jul 2019</span>
+					<div class="cv-details">
+						<strong>Ph.D., Astronomy</strong>
+						<div class="cv-institution">Max Planck Institute for Astronomy &bull; Ruprecht-Karls University, Heidelberg, Germany</div>
+						<div class="cv-thesis">Thesis: <em>High-Contrast Imaging Characterization of Exoplanets</em></div>
+						<span class="cv-distinction">Grade 1.0 &bull; Summa cum laude</span>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Sep 2012 &ndash; Sep 2015</span>
+					<div class="cv-details">
+						<strong>Master of Science, Physics</strong>
+						<div class="cv-institution">Max Planck Institute for Astronomy &bull; Ruprecht-Karls University, Heidelberg, Germany</div>
+						<div class="cv-thesis">Thesis: <em>Principal Component Analysis in the Context of High-Contrast Imaging</em></div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Nov 2012 &ndash; Sep 2013</span>
+					<div class="cv-details">
+						<strong>Research Project</strong>
+						<div class="cv-institution">Infrared Astronomy Group, Osaka University, Japan</div>
+						<div class="cv-thesis">Topic: <em>High-contrast imaging with the SEEDS survey</em></div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Sep 2009 &ndash; Aug 2012</span>
+					<div class="cv-details">
+						<strong>Bachelor of Science, Physics</strong>
+						<div class="cv-institution">Max Planck Institute for Astronomy &bull; Ruprecht-Karls University, Heidelberg, Germany</div>
+						<div class="cv-thesis">Thesis: <em>Global-Scale Glaciation Events and the Link to Exoplanets</em></div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Employment -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Employment History</h2>
+
+				<div class="cv-entry">
+					<span class="cv-date">Oct 2021 &ndash; present</span>
+					<div class="cv-details">
+						<strong>Post-doctoral Researcher</strong>
+						<div class="cv-institution">Planet and Star Formation &amp; APEx Department, Max Planck Institute for Astronomy, Heidelberg, Germany</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Oct 2019 &ndash; Sep 2021</span>
+					<div class="cv-details">
+						<strong>Post-doctoral Researcher</strong>
+						<div class="cv-institution">Stars, Planets and Astrobiology Group, Stockholm University, Stockholm, Sweden</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Aug 2019 &ndash; Sep 2019</span>
+					<div class="cv-details">
+						<strong>Post-doctoral Researcher</strong>
+						<div class="cv-institution">Planet and Star Formation Department, Max Planck Institute for Astronomy, Heidelberg, Germany</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Teaching -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Teaching Experience &mdash; 4 students</h2>
+
+				<div class="cv-entry">
+					<span class="cv-date">Feb &ndash; Sep 2024</span>
+					<div class="cv-details">
+						<strong>Supervision of Bachelor Student</strong>
+						<div class="cv-note">Julian Schauber &mdash; The Search for Planets and Brown Dwarfs around B-stars in the Massive Star-forming Region Orion (VLT/SPHERE survey; PI: Samland)</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Feb &ndash; May 2024</span>
+					<div class="cv-details">
+						<strong>Supervision of Internship Student</strong>
+						<div class="cv-note">Joyce Glass &mdash; Searching for Exoplanets with JWST Imaging of Orion</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">2022 &ndash; 2023</span>
+					<div class="cv-details">
+						<strong>Supervision of Master&rsquo;s Student</strong>
+						<div class="cv-note">Philipp Herz &mdash; Development of a statistical method to estimate the likelihood of a planet candidate being real based on Gaia stellar populations (<a href="https://ui.adsabs.harvard.edu/abs/2024A%26A...682A..92H/abstract" target="_blank" rel="noopener">published</a>)</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">2018 &ndash; 2019</span>
+					<div class="cv-details">
+						<strong>Supervision of Master&rsquo;s Student</strong>
+						<div class="cv-note">Jonas Kemmer &mdash; Homogeneous Reduction of the SPHERE/SHINE Survey Using ANDROMEDA and PyKLIP</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Sep 2014 &ndash; Feb 2015</span>
+					<div class="cv-details">
+						<strong>Teaching Assistant</strong>
+						<div class="cv-note">Introduction to Astronomy II (undergraduate course)</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Talks -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Recent Talks</h2>
+
+				<div class="cv-entry">
+					<span class="cv-date">June 2025</span>
+					<div class="cv-details">
+						<strong>The dawn of comparative exo-cometology</strong>
+						<div class="cv-institution">EAS, Berlin, Germany</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Feb 2025</span>
+					<div class="cv-details">
+						<strong>Debris Disks with JWST: The Missing Link in the mid-IR<span class="tag-invited">Invited</span></strong>
+						<div class="cv-institution">A Sharper View, Ringberg, Germany</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Oct 2024</span>
+					<div class="cv-details">
+						<strong>Characterizing Disks and Planets from the Ground and Space</strong>
+						<div class="cv-institution">Origins Seminars, Tucson, USA &mdash; <a href="https://youtu.be/b1dTyXT9CYU?si=gX3rVAbdMsdgL1JW" target="_blank" rel="noopener">recording</a></div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Sep 2024</span>
+					<div class="cv-details">
+						<strong>The MINDS Gas-Rich Debris Disk Sample Observed with JWST/MIRI MRS<span class="tag-invited">Invited</span></strong>
+						<div class="cv-institution">Europlanet Science Conference, Berlin, Germany</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Apr 2024</span>
+					<div class="cv-details">
+						<strong>JWST Imaging of Exoplanets<span class="tag-invited">Invited</span></strong>
+						<div class="cv-institution">Villa Vigoni Workshop on Protoplanetary Disks, Menaggio, Italy</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Aug 2023</span>
+					<div class="cv-details">
+						<strong>Imaging of Debris Disks in the MINDS Survey</strong>
+						<div class="cv-institution">JWST MIRI European Consortium Meeting, Dublin, Ireland</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Nov 2022</span>
+					<div class="cv-details">
+						<strong>Recent Updates in High-Contrast Imaging of Exoplanets</strong>
+						<div class="cv-institution">Special Seminar, Tokyo University, Japan</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">Jul 2022</span>
+					<div class="cv-details">
+						<strong>Highlights in High-Contrast Imaging of Exoplanets</strong>
+						<div class="cv-institution">K&ouml;nigsstuhl Colloquium, MPIA, Heidelberg, Germany</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- PI Proposals -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Accepted PI Proposals &mdash; 8 proposals &bull; 68 hours on 4 instruments</h2>
+
+				<div class="cv-item">
+					<span class="cv-item-label">VLT/SPHERE &bull; 2025</span>
+					<span class="cv-item-value">Search for Exoplanets in Extreme Debris Disks <span style="color:#9ca3af">(14 hours)</span></span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">VLT/ERIS &bull; 2024</span>
+					<span class="cv-item-value">Confirming the Youngest Population of Exoplanets around B-stars in Orion <span style="color:#9ca3af">(6 hours)</span></span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">VLT/SPHERE &bull; 2023</span>
+					<span class="cv-item-value">Imaging the Youngest Population of Exoplanets around B-stars in Orion <span style="color:#9ca3af">(35 hours)</span></span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">LBT/LMIRC &bull; 2022</span>
+					<span class="cv-item-value">Imaging the Youngest Population of Exoplanets around B-stars in Orion <span style="color:#9ca3af">(3 hours)</span></span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">LBT/ALES &bull; 2021</span>
+					<span class="cv-item-value">IFU L-band Spectroscopy of HD 206893 b <span style="color:#9ca3af">(executed; poor conditions)</span></span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">VLT/SPHERE &bull; 2020</span>
+					<span class="cv-item-value">Targeted Imaging of a Benchmark Brown Dwarf Detected by Gaia and RV <span style="color:#9ca3af">(pandemic loss)</span></span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">LBT/ALES &bull; 2018</span>
+					<span class="cv-item-value">IFU L-band Spectroscopy of HD 206893 b <span style="color:#9ca3af">(weather loss)</span></span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">LBT/LMIRC &bull; 2016</span>
+					<span class="cv-item-value">Observational Confirmation of Planet Candidate CVSO 30 c in L-band <span style="color:#9ca3af">(weather loss)</span></span>
+				</div>
+			</section>
+
+			<!-- Observing -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Observing Experience &mdash; 25 nights at 3 observatories</h2>
+
+				<div class="cv-entry">
+					<span class="cv-date">2015</span>
+					<div class="cv-details">
+						<strong>2.2m / FEROS &mdash; La Silla, Chile</strong>
+						<div class="cv-note">10 nights &mdash; High-resolution spectroscopy of RV binary candidates survey</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">2015</span>
+					<div class="cv-details">
+						<strong>VLT / SPHERE &mdash; Paranal, Chile</strong>
+						<div class="cv-note">11 nights &mdash; SHINE GTO exoplanet survey</div>
+					</div>
+				</div>
+
+				<div class="cv-entry">
+					<span class="cv-date">2013</span>
+					<div class="cv-details">
+						<strong>Subaru / HiCIAO &mdash; Mauna Kea, Hawaii</strong>
+						<div class="cv-note">4 nights &mdash; SEEDS exoplanet survey</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Organisational Roles -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Organisational Roles &mdash; TAC &bull; SOC &bull; Referee &bull; Representative</h2>
+
+				<div class="cv-item">
+					<span class="cv-item-label">TAC</span>
+					<span class="cv-item-value">JWST Cycle 4 &bull; ESO DPR veteran</span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">SOC</span>
+					<span class="cv-item-value"><strong>Chair of SOC</strong> for symposium at EAS 2023: &ldquo;One Year of JWST: The Road from Protostars to Planets&rdquo;</span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">Referee</span>
+					<span class="cv-item-value">JOSS &mdash; Journal for Open Source Science &bull; A&amp;A</span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">Representative</span>
+					<span class="cv-item-value"><strong>Work environment post-docs representative</strong>, Stockholm University</span>
+				</div>
+			</section>
+
+			<!-- Computer Skills -->
+			<section class="cv-section">
+				<h2 class="cv-section-title">Computer Skills &mdash; 3 published open-source packages</h2>
+
+				<div class="cv-item">
+					<span class="cv-item-label">Open-source packages</span>
+					<span class="cv-item-value">
+						<a href="https://github.com/m-samland/spherical" target="_blank" rel="noopener">spherical</a> &bull;
+						<a href="https://github.com/m-samland/trap" target="_blank" rel="noopener">trap</a> &bull;
+						<a href="https://github.com/PrincetonUniversity/charis-dep" target="_blank" rel="noopener">vlt/sphere-ifs</a>
+					</span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">AI / LLMs</span>
+					<span class="cv-item-value">Agentic LLM frameworks with ReAct and offline models &bull; Prompt engineering</span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">Programming</span>
+					<span class="cv-item-value">Python (very advanced) &bull; Cython (intermediate) &bull; C++ (basics)</span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">Scientific compute</span>
+					<span class="cv-item-value">NumPy &bull; SciPy &bull; Pandas &bull; astropy &bull; scikit-learn &bull; scikit-image &bull; OpenCV</span>
+				</div>
+				<div class="cv-item">
+					<span class="cv-item-label">Visualization</span>
+					<span class="cv-item-value">Matplotlib &bull; Seaborn &bull; Bokeh &bull; GlueViz &bull; pyds9</span>
+				</div>
+			</section>
+
+		</main><!-- .cv-page -->
+
+	</body>
+</html>

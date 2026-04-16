@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Conference poster: TRAP — Applying transit techniques to direct imaging data">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+<link rel="stylesheet" href="assets/css/main.css">
+<style>
+	/* ── Dark theme overrides for Bootstrap ─────────────────────── */
+
+	body {
+		background: #0f1218;
+		color: #e8e6e3;
+		font-size: 1rem;
+		padding-bottom: 3rem;
+	}
+
+	/* Cards */
+	.card {
+		background: #1e222a;
+		border: 1px solid #2a2f3a;
+		border-radius: 12px;
+	}
+
+	.card-body {
+		color: #e8e6e3;
+		line-height: 1.75;
+	}
+
+	/* Section headings inside cards */
+	h3 {
+		font-family: 'Lora', serif;
+		font-size: 0.78em;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #e8a838;
+		margin: 0 0 1em;
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid #2a2f3a;
+	}
+
+	h4 {
+		font-family: 'Lora', serif;
+		font-size: 0.78em;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		color: #e8a838;
+		margin: 0 0 1em;
+		padding-bottom: 0.5em;
+		border-bottom: 1px solid #2a2f3a;
+	}
+
+	/* Key terms */
+	b {
+		color: #e8e6e3;
+		font-weight: 600;
+	}
+
+	/* Figure captions */
+	p.small em {
+		color: #9ca3af;
+		font-size: 0.82em;
+	}
+
+	/* Links */
+	a {
+		color: #e8a838;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: #f0be5a;
+	}
+
+	/* References */
+	.references p {
+		color: #9ca3af;
+		font-size: 0.85em;
+		line-height: 1.8;
+	}
+
+	/* Hero title card */
+	.poster-header {
+		background: #141820;
+		border: 1px solid #2a2f3a;
+		border-top: 3px solid #e8a838;
+		border-radius: 12px;
+		padding: 2em 2.5em;
+		text-align: center;
+	}
+
+	.poster-header h1 {
+		font-family: 'Lora', serif;
+		font-size: 1.75em;
+		font-weight: 400;
+		color: #e8e6e3;
+		margin-bottom: 0.5em;
+	}
+
+	.poster-header .authors {
+		color: #9ca3af;
+		font-size: 0.9em;
+		margin: 0;
+	}
+
+	.poster-header .paper-link {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4em;
+		margin-top: 1em;
+		padding: 0.45em 1.2em;
+		border: 2px solid rgba(232, 168, 56, 0.45);
+		border-radius: 6px;
+		color: #e8a838;
+		font-size: 0.875em;
+		font-weight: 600;
+		transition: background 0.2s ease, border-color 0.2s ease;
+	}
+
+	.poster-header .paper-link:hover {
+		background: rgba(232, 168, 56, 0.1);
+		border-color: #e8a838;
+		color: #f0be5a;
+	}
+
+	/* Abstract card */
+	.abstract-card {
+		background: #141820;
+	}
+
+	.abstract-card .lead-label {
+		font-weight: 700;
+		color: #e8a838;
+	}
+
+	/* Top nav bar */
+	.poster-topbar {
+		position: sticky;
+		top: 0;
+		z-index: 100;
+		background: #1a1d23;
+		border-bottom: 1px solid #2a2f3a;
+		padding: 0.65em 1.5em;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: 0;
+	}
+
+	.poster-topbar a {
+		color: #9ca3af;
+		font-size: 0.875em;
+		text-decoration: none;
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4em;
+		transition: color 0.2s ease;
+	}
+
+	.poster-topbar a:hover {
+		color: #e8e6e3;
+	}
+
+	/* Video border */
+	video {
+		border-radius: 6px;
+		margin-bottom: 0.5em;
+	}
+
+	/* Image border */
+	picture img {
+		border-radius: 6px;
+	}
+
+	/* Responsive container spacing */
+	.main-container {
+		padding-top: 1.5rem;
+	}
+</style>
+<title>TRAP — Applying Transit Techniques to Direct Imaging Data</title>
+</head>
+<body>
+
+<!-- Top nav -->
+<nav class="poster-topbar">
+	<a href="index.html"><i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Matthias Samland</a>
+	<a href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..24S/abstract" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines" aria-hidden="true"></i> Published paper (A&amp;A 2021)</a>
+</nav>
+
+<div class="container main-container">
+
+	<!-- Title -->
+	<div class="row mb-3">
+		<div class="col-12">
+			<div class="poster-header">
+				<h1>TRAP: Applying Transit Techniques to Direct Imaging Data</h1>
+				<p class="authors">Matthias Samland (Stockholm University / MPIA) &bull; Jeroen Bouwman (MPIA) &bull; David W. Hogg (New York University / Flatiron Institute) &bull; Wolfgang Brandner (MPIA) &bull; Thomas Henning (MPIA)</p>
+				<a href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..24S/abstract" target="_blank" rel="noopener" class="paper-link">
+					<i class="fa-solid fa-file-lines" aria-hidden="true"></i> Samland et al. 2021, A&amp;A 646, A24
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Abstract -->
+	<div class="row mb-3">
+		<div class="col-12">
+			<div class="card abstract-card">
+				<div class="card-body">
+					<span class="lead-label">The Problem: </span>Traditional post-processing methods using sky-rotation are limited close to the inner working angle, where a large field-rotation is required to displace a source on the detector. This imposes a temporal exclusion criterion (protection angle) that reduces the usable training data.<br>
+					<span class="lead-label">The Solution: </span>We developed a data-driven causal temporal systematics model based on non-local reference pixel lightcurves. The approach draws from transit spectroscopy: we simultaneously fit a forward model of a planet signal &ldquo;transiting&rdquo; over detector pixels and reference lightcurves describing the speckle pattern&rsquo;s temporal trends.<br>
+					<span class="lead-label">The Result: </span>TRAP achieves up to 6&times; better contrast at small separations (&lt;3&lambda;/D) compared to spatial methods. For beta Pic b (VLT/SPHERE, 4-second integrations), SNR improves by a factor of four. The technique brings transit spectroscopy and direct imaging closer together, opening unexplored synergies between the two fields.
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Main content -->
+	<div class="row mb-3">
+		<div class="col-md-6">
+			<div class="card mb-3">
+				<div class="card-body">
+					<h3>Introduction</h3>
+					<p>Due to the rotation of the field-of-view, the companion signal moves along an arc through the background noise pattern.</p>
+					<video autoplay loop muted playsinline width="100%" style="display:block" aria-label="Animation of SPHERE data with injected planet signal, showing the arc traced by the companion during field rotation">
+						<source src="images/poster/timeseries_injected.webm" type="video/webm">
+						<source src="images/poster/timeseries_injected.mp4" type="video/mp4">
+					</video>
+					<p class="small"><em>Figure 1: SPHERE data with injected bright signal north of the host star, showing the sky rotation&rsquo;s effect on a companion.</em></p>
+					<p>Traditionally one models the background at the planet location using frames displaced in time until the planet has moved sufficiently. This requires the background to remain stable over those timescales. Here we replace the spatial model (combination of images) with a temporal model (combination of pixel lightcurves), constructing a forward model for the time series of each pixel &mdash; analogous to lightcurve modeling in transit observations.</p>
+				</div>
+			</div>
+			<div class="card mb-3">
+				<div class="card-body">
+					<h3>Model</h3>
+					<p>Modeling confounding systematics in time-series data is well studied (Sch&ouml;lkopf et al. 2015). As long as systematics share a common underlying cause, half-sibling regression can model them using other similarly affected timeseries. We use non-local pixels (similar separation, surrounding and mirrored areas) as training data, explicitly excluding the region affected by planet signal to rule out self-subtraction. A PCA decomposition of the lightcurves reduces collinearity.</p>
+					<p><picture>
+						<source srcset="images/poster/regressor_selection.webp" type="image/webp">
+						<img src="images/poster/regressor_selection.png" width="100%" height="auto" alt="Selection of non-local training pixels: white area indicates the pixels whose time-series train the temporal systematics model" loading="lazy">
+					</picture></p>
+					<p class="small"><em>Figure 2: Non-local training pixel selection. The white area marks pixels whose lightcurves train the temporal systematics model.</em></p>
+					<p>We simultaneously fit the temporal systematics model and the expected planet signal for each pixel position. The system of equations for a single pixel is shown in Figure 3.</p>
+					<p><picture>
+						<source srcset="images/poster/system_of_equations.webp" type="image/webp">
+						<img src="images/poster/system_of_equations.jpg" width="100%" height="auto" alt="Schematic of the system of linear equations solved simultaneously for the systematics and planet forward model" loading="lazy">
+					</picture></p>
+					<p class="small"><em>Figure 3: System of linear equations solved simultaneously for the systematics model (principal components) and the planet forward model.</em></p>
+					<p>The planet amplitude and uncertainty are determined per pixel; the final contrast is the noise-weighted average. Repeating over a grid of sky positions yields a detection map, normalized empirically for the simplifying assumptions in the least-squares fit.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-6">
+			<div class="card mb-3">
+				<div class="card-body">
+					<h3>Results</h3>
+					<p>We compare against ANDROMEDA (Cantalloube et al. 2015), which follows a similar forward-modelling approach. ANDROMEDA has been validated on the same SPHERE datasets (e.g. 51 Eridani b, Samland et al. 2017).</p>
+					<p><picture>
+						<source srcset="images/poster/betapic_comparison.webp" type="image/webp">
+						<img src="images/poster/betapic_comparison.png" width="100%" height="auto" alt="SNR map for beta Pic b: TRAP vs ANDROMEDA showing a factor four improvement with TRAP" loading="lazy">
+					</picture></p>
+					<p class="small"><em>Figure 4: SNR map for &beta; Pic b using TRAP and ANDROMEDA.</em></p>
+					<p>Figure 4 shows a 4&times; SNR improvement for &beta; Pic b (4-second integrations). The temporal model requires no protection angle, so systematics can be modelled even at the shortest timescales. Binning to 64-second integrations &mdash; the common but suboptimal choice &mdash; brings TRAP and ANDROMEDA to similar SNR, confirming temporal sampling as the primary driver of the gain.</p>
+					<p><picture>
+						<source srcset="images/poster/contrast_curve.webp" type="image/webp">
+						<img src="images/poster/contrast_curve.png" width="100%" height="auto" alt="Contrast curves comparing TRAP at various principal component fractions against ANDROMEDA with standard protection angle" loading="lazy">
+					</picture></p>
+					<p class="small"><em>Figure 5: Contrast curves for TRAP (varying PC fraction) vs ANDROMEDA (0.5&lambda;/D protection angle). Shaded band: 14&ndash;86 percentile range along the azimuth.</em></p>
+					<p>At the smallest separations, where protection angles dominate, the temporal model gain is largest. Even at wider separations, short-integration TRAP improves contrast by a factor of two by reducing systematic noise.</p>
+				</div>
+			</div>
+			<div class="card mb-3">
+				<div class="card-body">
+					<h3>Conclusion</h3>
+					<p>By using a temporal model we achieve an important contrast boost at small angular separations &mdash; the parameter space most relevant for finding Jupiter analogues with direct imaging. Shorter integration times, previously underutilized because protection angles negated their benefit, become advantageous with TRAP. The method also helps for data with limited field-of-view rotation and space-based roll-angle observations.</p>
+					<p>The temporal and spatial approaches are complementary: they optimize different quantities (temporal vs. spatial similarity). Applying a LOCI-like approach to TRAP residuals &mdash; which are temporally white but spatially correlated &mdash; could make optimal use of all available information. The framework further extends naturally to polychromatic training data.</p>
+					<p>The code is available on GitHub: <a href="https://github.com/m-samland/trap" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i> m-samland/trap</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- References -->
+	<div class="row mb-4">
+		<div class="col-12">
+			<div class="card references">
+				<div class="card-body">
+					<h4>References</h4>
+					<p>
+						Cantalloube, F. &amp; Mugnier, L. M., A&amp;A 582, A89 (2015) &mdash; <a href="https://ui.adsabs.harvard.edu/abs/2015A%26A...582A..89C/abstract" target="_blank" rel="noopener">ADS</a><br>
+						Lafrenière, D. &amp; Marois, C., ApJ 660, 770 (2007) &mdash; <a href="https://ui.adsabs.harvard.edu/abs/2007ApJ...660..770L/abstract" target="_blank" rel="noopener">ADS</a><br>
+						Samland, M., Mollière, P., et al., A&amp;A 603, A57 (2017) &mdash; <a href="https://ui.adsabs.harvard.edu/abs/2017A%26A...603A..57S/abstract" target="_blank" rel="noopener">ADS</a><br>
+						Samland, M., Bouwman, J., et al., A&amp;A 646, A24 (2021) &mdash; <a href="https://ui.adsabs.harvard.edu/abs/2021A%26A...646A..24S/abstract" target="_blank" rel="noopener">ADS</a><br>
+						Sch&ouml;lkopf, B. &amp; Hogg, D. W., arXiv:1505.03036 (2015) &mdash; <a href="https://ui.adsabs.harvard.edu/abs/2015arXiv150503036S/abstract" target="_blank" rel="noopener">ADS</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
