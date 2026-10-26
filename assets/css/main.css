@@ -2557,58 +2557,21 @@
 
 /* Publications */
 
-	.pub-metrics {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1.5em;
-		margin-bottom: 2.5em;
-	}
-
-	.obs-metrics {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 1.5em;
-		margin-bottom: 2em;
-	}
-
-	.pub-metric {
-		background: #1e222a;
-		border: 1px solid #2a2f3a;
-		border-radius: 12px;
-		padding: 1.5em 1em;
+	.metric-line {
+		max-width: 34em;
+		margin: 0 auto 2.5em;
 		text-align: center;
-		transition: border-color 0.3s ease;
+		font-size: 1.15em;
+		line-height: 1.7;
+		color: #e8e6e3;
 	}
 
-	.pub-metric:hover {
-		border-color: rgba(232, 168, 56, 0.3);
-	}
-
-	.pub-metric-number {
-		display: block;
+	.metric-figure {
 		font-family: 'Lora', serif;
-		font-size: 2.4em;
+		font-size: 1.2em;
 		font-weight: 600;
 		color: #e8a838;
-		line-height: 1.2;
-	}
-
-	.pub-metric-label {
-		display: block;
-		color: #9ca3af;
-		font-size: 0.85em;
-		margin-top: 0.3em;
-		text-transform: uppercase;
-		letter-spacing: 0.05em;
-	}
-
-	.pub-metric-sub {
-		display: block;
-		color: #6b7280;
-		font-size: 0.75em;
-		margin-top: 0.25em;
-		text-transform: none;
-		letter-spacing: 0;
+		font-variant-numeric: lining-nums;
 	}
 
 	.pub-section-heading {
@@ -3341,34 +3304,8 @@
 			}
 
 		/* Publication metrics responsive */
-			.pub-metrics {
-				grid-template-columns: repeat(2, 1fr);
-				gap: 0.75em;
-			}
-
-			.pub-metrics .pub-metric:last-child:nth-child(odd) {
-				grid-column: 1 / -1;
-				max-width: calc(50% - 0.375em);
-				margin-inline: auto;
-			}
-
-			.obs-metrics {
-				grid-template-columns: repeat(2, 1fr);
-				gap: 0.75em;
-			}
-
-			.obs-metrics .pub-metric:last-child:nth-child(odd) {
-				grid-column: 1 / -1;
-				max-width: calc(50% - 0.375em);
-				margin-inline: auto;
-			}
-
-			.pub-metric {
-				padding: 1em 0.5em;
-			}
-
-			.pub-metric-number {
-				font-size: 1.8em;
+			.metric-line {
+				font-size: 1em;
 			}
 
 			.pub-highlights li {
